@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới thiệu giảng viên</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <style>
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+      text-align: center;
+      padding: 10px 0; 
+    }
+    nav a {
+      margin: 0 15px;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    nav a.active {
+      color: #007BFF;
+      text-decoration: underline;
+    }
+    body { padding-top: 60px; } /* tránh nav che nội dung */
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#giangvien" id="link-giangvien">Giảng viên</a>
+    <a href="#baigiang" id="link-baigiang">Bài giảng</a>
+    <a href="#tailieu" id="link-tailieu">Tài liệu</a>
+  </nav>
+
+  <section class="section hidden" id="giangvien">
+    <h2>Thông tin Giảng viên</h2>
+    <p><strong>Họ tên:</strong> Tống Thị Lan Anh</p>
+    <p><strong>Giới tính:</strong> Nữ</p>
+    <p><strong>Ngày sinh:</strong> 03/05/1987</p>
+    <p><strong>Đơn vị công tác:</strong> Khoa Lý luận chính trị & KHXHNV - Học viện CSND</p>
+    <p><strong>Chức danh:</strong> Giảng viên chính</p>
+  </section>
+
+  <section class="section hidden" id="baigiang">
+    <h2>Bài giảng</h2>
+
+    <!-- Hiển thị file PDF -->
+    <div style="width: 100%; height: 80vh; border: none;">
+      <iframe 
+        src="https://drive.google.com/gview?url=https://drive.google.com/uc?id=1Z2qs5jVwryXeXJqo9DCBb7ZYLJsPWuwD&embedded=true" 
+        width="100%" 
+        height="100%" 
+        frameborder="0">
+      </iframe>
+    </div>
+  </section>
+
+  <section class="section hidden" id="tailieu">
+    <h2>Tài liệu tham khảo</h2>
+    <p><a href="https://drive.google.com/file/d/your_reference_pdf_id/view" target="_blank">Tài liệu tham khảo (PDF)</a></p>
+    <ul>
+      <li><a href="http://lib.hvcsnd.bca/" target="_blank">Thư viện điện tử Học viện Cảnh sát nhân dân</a></li>
+      <li><a href="https://tulieuvankien.dangcongsan.vn/" target="_blank">Hệ thống Tư liệu - Văn kiện Đảng</a></li>
+      <li><a href="https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/book/van-kien-dang-toan-tap/van-kien-dang-toan-tap-tap-7-87" target="_blank">Văn kiện Đảng tập 7</a></li>
+      <li><a href="https://tulieuvankien.dangcongsan.vn/c-mac-angghen-lenin-ho-chi-minh/book/ho-chi-minh/tac-pham/ho-chi-minh-toan-tap-tap-3-270" target="_blank">Hồ Chí Minh toàn tập tập 3</a></li>
+      <li><a href="https://tapchilichsudang.vn/" target="_blank">Tạp chí Lịch sử Đảng</a></li>
+      <li><a href="https://www.tapchicongsan.org.vn/" target="_blank">Tạp chí Cộng sản</a></li>
+      <li><a href="https://www.qdnd.vn/" target="_blank">Báo Quân đội nhân dân</a></li>
+      <li><a href="https://tapchiqptd.vn/" target="_blank">Tạp chí Quốc phòng toàn dân</a></li>
+    </ul>
+  </section>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          // Highlight current nav link
+          document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+          const id = entry.target.getAttribute('id');
+          const activeLink = document.getElementById(`link-${id}`);
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+    }, { threshold: 0.6 });
+
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
