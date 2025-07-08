@@ -1,96 +1,127 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Giới thiệu giảng viên</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com "></script>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-  <style>
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      z-index: 1000;
-      text-align: center;
-      padding: 10px 0; 
-    }
-    nav a {
-      margin: 0 15px;
-      color: #2c3e50;
-      font-weight: bold;
-    }
-    nav a.active {
-      color: #007BFF;
-      text-decoration: underline;
-    }
-    body { padding-top: 60px; } /* tránh nav che nội dung */
-  </style>
 </head>
-<body>
-  <nav>
-    <a href="#giangvien" id="link-giangvien">Giảng viên</a>
-    <a href="#baigiang" id="link-baigiang">Bài giảng</a>
-    <a href="#tailieu" id="link-tailieu">Tài liệu</a>
+
+<body class="bg-gray-100 min-h-screen font-sans scroll-smooth">
+  <nav class="fixed top-0 w-full bg-white shadow-md z-50 py-3 px-4">
+    <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
+      <a href="#giangvien" id="link-giangvien" class="font-semibold text-gray-800 hover:text-blue-600 transition">Giảng viên</a>
+      <a href="#baigiang" id="link-baigiang" class="font-semibold text-gray-800 hover:text-blue-600 transition">Bài giảng</a>
+      <a href="#tailieu" id="link-tailieu" class="font-semibold text-gray-800 hover:text-blue-600 transition">Tài liệu</a>
+    </div>
   </nav>
 
-  <section class="section hidden" id="giangvien">
-    <h2>Thông tin Giảng viên</h2>
-    <p><strong>Họ tên:</strong> Tống Thị Lan Anh</p>
-    <p><strong>Giới tính:</strong> Nữ</p>
-    <p><strong>Ngày sinh:</strong> 03/05/1987</p>
-    <p><strong>Đơn vị công tác:</strong> Khoa Lý luận chính trị & KHXHNV - Học viện CSND</p>
-    <p><strong>Chức danh:</strong> Giảng viên chính</p>
+  <main class="snap-container">
+    <!-- Section Giảng viên -->
+    <section id="giangvien" class="snap-section bg-gradient-to-r from-blue-50 to-indigo-100 bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Ô 1: Ảnh giảng viên (1/3) -->
+        <div class="md:col-span-1 w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-blue-500 shadow-md mb-2">
+          <img 
+            src="/source/anh_co_lan_anh.jpg" 
+            alt="Cô Lan Anh" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Ô 2: Thông tin cơ bản (2/3) -->
+        <div class="md:col-span-2 bg-white rounded-lg text-center flex p-4 h-full items-center">
+          <div class=" w-full">
+            <h1 class="text-2xl font-bold text-gray-800 mb-2">TỐNG THỊ LAN ANH</h1>
+            <p class="text-lg font-semibold text-gray-700">Khoa Lý Luận Chính Trị & KHXHNV - Học viện CSND</p>
+          </div>          
+          
+        </div>
+
+        <!-- Đường kẻ gradient hoạt động -->
+        <div class="md:col-span-3 animated-gradient-line css-j7r1e2 my-0" 
+            style="animation: 2.2s ease-in-out 0s infinite normal none running moveLine;">
+        </div>
+
+        <!-- Ô 3 và Ô 4: Dời xuống hàng dưới -->
+        <div class="md:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          <!-- Ô 3: Thông tin khác -->
+          <div class="bg-white rounded-lg p-4">
+            <ul class="space-y-3 text-gray-700 list-none">
+              <!-- Giới tính -->
+              <li class="flex items-center gap-3">
+                <span class="text-sky-500 text-xl" aria-hidden="true">♀️</span>
+                <strong>Giới tính:</strong>
+                <span class="font-semibold">Nữ</span>
+              </li>
+              
+              <!-- Ngày sinh -->
+              <li class="flex items-center gap-3">
+                <span class="text-emerald-500 text-xl" aria-hidden="true">📅</span>
+                <strong>Ngày sinh:</strong> 
+                <span class="font-semibold">03/05/1987</span>
+              </li>
+              
+              <!-- Số điện thoại -->
+              <li class="flex items-center gap-3">
+                <span class="text-violet-500 text-xl" aria-hidden="true">📞</span>
+                <strong>Số điện thoại:</strong> 
+                <span class="font-semibold">0123456</span>
+              </li>
+              
+              <!-- Chức danh (đã đổi icon & màu) -->
+              <li class="flex items-center gap-3">
+                <span class="text-emerald-500 text-xl" aria-hidden="true">🎖️</span>
+                <strong>Chức danh:</strong> 
+                <span class="font-semibold">Giảng viên chính</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Ô 4: Lịch sử công tác -->
+          <div class="bg-white rounded-lg p-4">
+            <h2 class="text-xl font-bold mb-2">Lịch sử công tác</h2>
+            <p class="text-gray-700">
+              Tốt nghiệp cử nhân năm 2010 tại Học viện CSND.<br>
+              Công tác từ năm 2012 đến nay tại Khoa Lý luận chính trị.
+            </p>
+          </div>
+        </div>
+      </div>
   </section>
 
-  <section class="section hidden" id="baigiang">
-    <h2>Bài giảng</h2>
 
-    <!-- Hiển thị file PDF -->
-    <div style="width: 100%; height: 80vh; border: none;">
-      <iframe 
-        src="https://drive.google.com/gview?url=https://drive.google.com/uc?id=1Z2qs5jVwryXeXJqo9DCBb7ZYLJsPWuwD&embedded=true" 
-        width="100%" 
-        height="100%" 
-        frameborder="0">
-      </iframe>
-    </div>
-  </section>
 
-  <section class="section hidden" id="tailieu">
-    <h2>Tài liệu tham khảo</h2>
-    <p><a href="https://drive.google.com/file/d/your_reference_pdf_id/view" target="_blank">Tài liệu tham khảo (PDF)</a></p>
-    <ul>
-      <li><a href="http://lib.hvcsnd.bca/" target="_blank">Thư viện điện tử Học viện Cảnh sát nhân dân</a></li>
-      <li><a href="https://tulieuvankien.dangcongsan.vn/" target="_blank">Hệ thống Tư liệu - Văn kiện Đảng</a></li>
-      <li><a href="https://tulieuvankien.dangcongsan.vn/van-kien-tu-lieu-ve-dang/book/van-kien-dang-toan-tap/van-kien-dang-toan-tap-tap-7-87" target="_blank">Văn kiện Đảng tập 7</a></li>
-      <li><a href="https://tulieuvankien.dangcongsan.vn/c-mac-angghen-lenin-ho-chi-minh/book/ho-chi-minh/tac-pham/ho-chi-minh-toan-tap-tap-3-270" target="_blank">Hồ Chí Minh toàn tập tập 3</a></li>
-      <li><a href="https://tapchilichsudang.vn/" target="_blank">Tạp chí Lịch sử Đảng</a></li>
-      <li><a href="https://www.tapchicongsan.org.vn/" target="_blank">Tạp chí Cộng sản</a></li>
-      <li><a href="https://www.qdnd.vn/" target="_blank">Báo Quân đội nhân dân</a></li>
-      <li><a href="https://tapchiqptd.vn/" target="_blank">Tạp chí Quốc phòng toàn dân</a></li>
-    </ul>
-  </section>
+    <!-- Section Bài giảng -->
+    <section id="baigiang" class="snap-section bg-gradient-to-r from-green-50 to-teal-100">
+      <div class="text-center max-w-4xl px-6">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Bài giảng</h2>
+        <div class="w-full h-[80vh] border border-gray-300 rounded-lg overflow-hidden shadow-md">
+          <iframe 
+            src="/source/GiaoTrinhLSD.pdf" 
+            class="w-full h-full"
+            title="Bài giảng PDF"
+          ></iframe>
+        </div>
+      </div>
+    </section>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          // Highlight current nav link
-          document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
-          const id = entry.target.getAttribute('id');
-          const activeLink = document.getElementById(`link-${id}`);
-          if (activeLink) activeLink.classList.add('active');
-        }
-      });
-    }, { threshold: 0.6 });
+    <!-- Section Tài liệu -->
+    <section id="tailieu" class="snap-section bg-gradient-to-r from-purple-50 to-pink-100">
+      <div class="text-center max-w-2xl px-6">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Tài liệu tham khảo</h2>
+        <ul class="text-left text-gray-700 space-y-3 list-disc pl-5">
+          <li><a href=" https://drive.google.com/file/d/your_reference_pdf_id/view " target="_blank" class="text-blue-600 hover:text-blue-800">Tài liệu tham khảo (PDF)</a></li>
+          <li><a href="http://lib.hvcsnd.bca/" target="_blank" class="text-blue-600 hover:text-blue-800">Thư viện điện tử Học viện Cảnh sát nhân dân</a></li>
+          <li><a href="https://tulieuvankien.dangcongsan.vn/ " target="_blank" class="text-blue-600 hover:text-blue-800">Hệ thống Tư liệu - Văn kiện Đảng</a></li>
+          <!-- Thêm các link khác tương tự -->
+        </ul>
+      </div>
+    </section>
+  </main>
 
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(section => observer.observe(section));
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

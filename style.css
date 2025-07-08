@@ -1,86 +1,70 @@
-/* style.css */
-html, body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-  line-height: 1.6;
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-section {
-  max-width: 800px;
-  margin: 0 auto;
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease-out;
-  scroll-snap-align: start;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
+/* Giữ nguyên các style responsive từ code gốc */
 @media (max-width: 600px) {
   nav {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
-  nav a {
-    margin: 10px 0;
-  }
+}
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
-@media (max-width: 600px) {
-  nav a {
-    font-size: 14px;
-    margin: 8px 0;
-  }
-
-  section {
-    padding: 20px;
-    width: 95%;
-  }
-
-  h2 {
-    font-size: 1.3em;
-  }
-}
-
-.section {
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.section.show {
+.snap-section.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-section.show {
-  opacity: 1;
-  transform: translateY(0);
+@keyframes moveLine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-h2 {
-  color: #2c3e50;
+.animated-gradient-line {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #00f2ff, #007aff, #00f2ff);
+  background-size: 200% 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0px; /* Điều chỉnh khoảng cách với hàng trên/dưới */
 }
 
-a {
-  color: #007BFF;
-  text-decoration: none;
+@keyframes moveLine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-a:hover {
-  text-decoration: underline;
+
+.animated-gradient-line {
+  animation: moveLine 1.6s ease-in-out infinite;
 }
