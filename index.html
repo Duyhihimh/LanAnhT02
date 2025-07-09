@@ -19,6 +19,7 @@
   <main class="snap-container">
     <!-- Section Giảng viên -->
     <section id="giangvien" class="snap-section bg-gradient-to-r from-blue-50 to-indigo-100 p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
+      <div class="h-[54px] invisible"></div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="md:col-span-1 flex justify-center">
           <div class="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-blue-500 shadow-md">
@@ -68,145 +69,190 @@
 
     <!-- Section Tài Liệu Chính -->
     <section id="tailieuchinh" class="snap-section bg-gradient-to-r from-green-50 to-teal-100 py-12 px-6">
-      <div class="max-w-6xl mx-auto animate-fadeIn">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="md:col-span-1 bg-white p-6 rounded-lg shadow-md">
-            <div class="space-y-8">
-              <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3">
-                <div class="text-emerald-500 w-6 h-6 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-2a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                  </svg>
+        <div class="max-w-6xl mx-auto animate-fadeIn">
+            <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8 items-center">
+                <!-- Thông tin tài liệu -->
+                <div class="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-teal-100">
+                    <h2 class="text-3xl font-bold text-teal-800 mb-4">Giáo Trình Lịch Sử Đảng</h2>
+                    <p class="text-gray-700 mb-6">
+                        Tài liệu giáo trình Lịch sử Đảng Cộng sản Việt Nam dành cho học viên các lớp bồi dưỡng lý luận chính trị. 
+                        Cung cấp kiến thức hệ thống về quá trình hình thành và phát triển của Đảng qua các thời kỳ lịch sử.
+                    </p>
+                    
+                    <a 
+                        href="/source/GiaoTrinhLSD.pdf" 
+                        download
+                        class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-500 to-green-500 text-white rounded-lg hover:from-teal-600 hover:to-green-600 transition-all transform hover:scale-105 shadow-md hover:shadow-lg"
+                    >
+                        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 16L16 12M16 12L12 8M16 12L8 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Tải về tài liệu
+                    </a>
                 </div>
-                <div>
-                  <h3 class="font-semibold text-gray-800">Giáo trình Lịch Sử Đảng</h3>
-                  <p class="text-sm text-gray-600 mt-1">Phong trào ..... cô tự thêm vào cô ơi dài dài dài như này cho nó đẹp với mấy cái dưới</p>
+
+                <!-- Hiển thị PDF -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-shadow duration-300 relative mt-8 border border-gray-200">
+                    <!-- Hiệu ứng loading -->
+                    <div id="loadingPDF" class="absolute inset-0 bg-white flex items-center justify-center loading-spinner z-10">
+                        <div class="text-center">
+                            <div class="inline-block w-8 h-8 border-4 border-teal-500 border-t-transparent rounded-full animate-spin mb-2"></div>
+                            <p class="text-teal-700 text-sm font-medium">Đang tải tài liệu...</p>
+                        </div>
+                    </div>
+
+                    <!-- Khung PDF -->
+                    <div class="relative pt-[100%] bg-white">
+                        <iframe 
+                            src="/source/GiaoTrinhLSD.pdf" 
+                            class="absolute inset-0 w-full h-full bg-white"
+                            title="Giáo trình Lịch sử Đảng"
+                            onload="document.getElementById('loadingPDF').style.display = 'none'"
+                        ></iframe>
+                    </div>
+                    
+
                 </div>
-              </div>
-              <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3">
-                <div class="text-emerald-500 w-6 h-6 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.245 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.745 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.745 0-3.332.477-4.5 1.253" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-gray-800">Văn Kiện Đảng tập 7</h3>
-                  <p class="text-sm text-gray-600 mt-1">Đóng góp lý luận của Hồ Chí Minh cho chủ nghĩa Mác - Lênin.</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3">
-                <div class="text-emerald-500 w-6 h-6 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-2a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-gray-800">Hồ Chí Minh toàn tập tập 3</h3>
-                  <p class="text-sm text-gray-600 mt-1">Định hướng chiến lược cách mạng Việt Nam và thế giới.</p>
-                </div>
-              </div>
-              <div class="mt-6">
-                <a href="/source/GiaoTrinhLSD.pdf" download class="inline-block w-full px-4 py-2 bg-emerald-500 text-white rounded-md shadow hover:bg-emerald-600 transition text-center">
-                  📄 Tải tài liệu xuống
-                </a>
-              </div>
             </div>
-          </div>
-          <div class="md:col-span-2 bg-white p-6 rounded-lg shadow-md">
-            <div class="w-full h-[80vh] border border-gray-300 rounded-lg overflow-hidden shadow-inner relative">
-              <iframe id="pdfFrame1" src="/source/GiaoTrinhLSD.pdf" class="w-full h-full opacity-0 transition-opacity duration-500" title="Tài liệu PDF" onload="hideLoading(this)"></iframe>
-              <div id="loading-pdf1" class="absolute inset-0 flex items-center justify-center bg-gray-50 z-10">
-                <div class="flex flex-col items-center">
-                  <svg class="animate-spin h-8 w-8 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291l-1.414-1.414 3.291-3.291H4v-2h5.879l-3.291-3.291L8.291 4 12 7.709 15.709 4l1.414 1.414L13.414 9H20v2h-6.586l3.709 3.709 1.414-1.414L12 11.586 4.291 19.291l1.414 1.414L12 14.414z"/>
-                  </svg>
-                  <span class="mt-2 text-sm text-gray-600">Đang tải tài liệu...</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- Section Tài Liệu Tham Khảo -->
     <section id="tailieuthamkhao" class="snap-section bg-gradient-to-r from-green-50 to-teal-100 py-12 px-6">
-      <div class="max-w-6xl mx-auto animate-fadeIn">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="md:col-span-1 bg-white p-6 rounded-lg shadow-md">
-            <div class="space-y-8">
-              <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition" onclick="loadContent('/source/GiaoTrinhLSD.pdf', 'pdfFrame2', 'downloadBtn2')">
-                <div class="text-emerald-500 w-6 h-6 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35M5 11a6 6 0 1112 0 6 6 0 01-12 0z" />
-                  </svg>
+      
+        <div class="max-w-6xl mx-auto animate-fadeIn">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Cột trái (1/3) -->
+                <div class="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold text-teal-800 mb-4">Danh mục</h3>
+                    <ul class="space-y-8" id="menu">
+                      <li>
+                          <button onclick="showContent('thuvien')" 
+                                  class="w-full" 
+                                  type="button">
+                              <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition active"
+                                  id="btn-thuvien">
+                                  <div class="text-emerald-500 w-6 h-6 mt-1 flex-shrink-0">
+                                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M5 11a6 6 0 1112 0 6 6 0 01-12 0z" />
+                                      </svg>
+                                  </div>
+                                  <div class="flex-1 text-left">
+                                      <h3 class="font-semibold text-gray-800">Thư viện điện tử HVCSND</h3>
+                                      <p class="text-sm text-gray-600 mt-1">Thư viện điện tử Học viện Cảnh sát Nhân dân</p>
+                                  </div>
+                              </div>
+                          </button>
+                      </li>
+                        <li>
+                            <button onclick="showContent('sach')" 
+                                    class="w-full text-left px-4 py-2 rounded-lg hover:bg-teal-100 text-teal-700 font-medium">
+                                Sách tham khảo
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="showContent('bao')" 
+                                    class="w-full text-left px-4 py-2 rounded-lg hover:bg-teal-100 text-teal-700 font-medium">
+                                Báo và tạp chí
+                            </button>
+                        </li>
+                    </ul>
                 </div>
-                <div>
-                  <h3 class="font-semibold text-gray-800">Thư viện điện tử HVCSND</h3>
-                  <p class="text-sm text-gray-600 mt-1">Thư viện điện tử Học viện Cảnh sát Nhân dân</p>
+
+                <!-- Cột phải (2/3) -->
+                <div class="md:col-span-2">
+                    <!-- Nội dung thư viện -->
+                    <div id="thuvien" class="content-section animate-fadeIn">
+                        <h3 class="text-2xl font-bold text-teal-800 mb-4">Thư viện</h3>
+                        <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                            <img src="/source/ThuviendientuHVCSND.jpg" 
+                                 alt="Thư viện" 
+                                 class="w-full h-auto">
+                        </div>
+                    </div>
+
+                    <!-- Nội dung sách tham khảo -->
+                    <div id="sach" class="content-section hidden">
+                        <h3 class="text-2xl font-bold text-teal-800 mb-4">Sách tham khảo</h3>
+                        <div class="bg-white rounded-xl overflow-hidden shadow-lg relative">
+                            <div class="relative pt-[120%]">
+                                <iframe 
+                                    src="/source/SachThamKhao.pdf" 
+                                    class="absolute inset-0 w-full h-full"
+                                    title="Sách tham khảo"
+                                ></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nội dung báo và tạp chí -->
+                    <div id="bao" class="content-section hidden">
+                        <h3 class="text-2xl font-bold text-teal-800 mb-4">Báo và tạp chí</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <a href=" https://www.nhandan.vn " target="_blank" 
+                               class="block p-4 bg-white rounded-xl shadow hover:shadow-md transition-shadow border-l-4 border-teal-500">
+                                <h4 class="font-semibold text-teal-700">Nhân Dân</h4>
+                                <p class="text-sm text-gray-600">Báo chính thống của Đảng</p>
+                            </a>
+                            <a href="https://vnexpress.net " target="_blank" 
+                               class="block p-4 bg-white rounded-xl shadow hover:shadow-md transition-shadow border-l-4 border-teal-500">
+                                <h4 class="font-semibold text-teal-700">VnExpress</h4>
+                                <p class="text-sm text-gray-600">Báo điện tử hàng đầu</p>
+                            </a>
+                            <a href="https://tuoitre.vn " target="_blank" 
+                               class="block p-4 bg-white rounded-xl shadow hover:shadow-md transition-shadow border-l-4 border-teal-500">
+                                <h4 class="font-semibold text-teal-700">Tuổi Trẻ</h4>
+                                <p class="text-sm text-gray-600">Báo dành cho giới trẻ</p>
+                            </a>
+                            <a href="https://www.tapchicongsan.org.vn " target="_blank" 
+                               class="block p-4 bg-white rounded-xl shadow hover:shadow-md transition-shadow border-l-4 border-teal-500">
+                                <h4 class="font-semibold text-teal-700">Tạp chí Cộng Sản</h4>
+                                <p class="text-sm text-gray-600">Tạp chí lý luận chính trị</p>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition" onclick="loadContent('/source/VanKienDang.pdf', 'pdfFrame2', 'downloadBtn2')">
-                <div class="text-emerald-500 w-6 h-6 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5h6m-3 0v1m-6 4h12m-12 4h12m-12 4h12M7 3h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-gray-800">Tư liệu văn kiện Đảng</h3>
-                  <p class="text-sm text-gray-600 mt-1">Tư liệu văn kiện Đảng</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition" onclick="loadContent('/source/SachThamKhao.pdf', 'pdfFrame2', 'downloadBtn2')">
-                <div class="text-emerald-500 w-6 h-6 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.245 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.745 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.745 0-3.332.477-4.5 1.253" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-gray-800">Sách tham khảo</h3>
-                  <p class="text-sm text-gray-600 mt-1">Sách tham khảo</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition" onclick="loadContent('/source/BaoTapChi.pdf', 'pdfFrame2', 'downloadBtn2')">
-                <div class="text-emerald-500 w-6 h-6 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-                    <rect x="4" y="4" width="16" height="16" rx="2" strokeWidth="2" />
-                    <path strokeWidth="2" d="M16 4L20 8H16V4Z" fill="none" />
-                    <line x1="6" y1="10" x2="14" y2="10" strokeWidth="2" />
-                    <line x1="6" y1="14" x2="12" y2="14" strokeWidth="2" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-gray-800">Báo và tạp chí</h3>
-                  <p class="text-sm text-gray-600 mt-1">Báo và tạp chí</p>
-                </div>
-              </div>
-              <div class="mt-6">
-                <a href="/source/GiaoTrinhLSD.pdf" download id="downloadBtn2" class="inline-block w-full px-4 py-2 bg-emerald-500 text-white rounded-md shadow hover:bg-emerald-600 transition text-center">
-                  📄 Tải tài liệu xuống
-                </a>
-              </div>
             </div>
-          </div>
-          <div class="md:col-span-2 bg-white p-6 rounded-lg shadow-md">
-            <div class="w-full h-[80vh] border border-gray-300 rounded-lg overflow-hidden shadow-inner relative">
-              <iframe id="pdfFrame2" src="/source/GiaoTrinhLSD.pdf" class="w-full h-full opacity-0 transition-opacity duration-500" title="Tài liệu tham khảo" onload="hideLoading(this)"></iframe>
-              <div id="loading-pdf2" class="absolute inset-0 flex items-center justify-center bg-gray-50 z-10">
-                <div class="flex flex-col items-center">
-                  <svg class="animate-spin h-8 w-8 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291l-1.414-1.414 3.291-3.291H4v-2h5.879l-3.291-3.291L8.291 4 12 7.709 15.709 4l1.414 1.414L13.414 9H20v2h-6.586l3.709 3.709 1.414-1.414L12 11.586 4.291 19.291l1.414 1.414L12 14.414z"/>
-                  </svg>
-                  <span class="mt-2 text-sm text-gray-600">Đang tải tài liệu...</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+
+        <script>
+            // Ẩn tất cả các phần nội dung
+            function hideAllContent() {
+                document.querySelectorAll('.content-section').forEach(el => {
+                    el.classList.add('hidden');
+                });
+            }
+
+            // Hiển thị nội dung tương ứng
+            function showContent(id) {
+                // Ẩn tất cả
+                hideAllContent();
+                
+                // Hiển thị phần được chọn
+                document.getElementById(id).classList.remove('hidden', 'animate-fadeIn');
+                document.getElementById(id).offsetWidth; // Kích hoạt lại animation
+                document.getElementById(id).classList.add('animate-fadeIn');
+
+                // Cập nhật trạng thái menu
+                document.querySelectorAll('#menu button').forEach(btn => {
+                    btn.classList.remove('active-tab', 'bg-teal-100');
+                    btn.classList.add('text-teal-700');
+                });
+                
+                const activeBtn = document.querySelector(`[onclick="showContent('${id}')"]`);
+                activeBtn.classList.add('active-tab');
+                activeBtn.classList.remove('text-teal-700');
+            }
+
+            // Mặc định hiển thị thư viện khi load trang
+            document.addEventListener('DOMContentLoaded', () => {
+                showContent('thuvien');
+            });
+        </script>
     </section>
+
   </main>
 
   <script src="script.js"></script>
