@@ -1,19 +1,18 @@
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(50px); }
+  from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 .animate-fadeIn {
-  animation: fadeIn 0.8s ease-out forwards;
+  animation: fadeIn 1s ease-out forwards;
 }
 
-/* Giữ nguyên các style responsive từ code gốc */
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
     align-items: center;
   }
 }
+
 .snap-container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -22,30 +21,16 @@
 
 .snap-section {
   scroll-snap-align: start;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 100vh;
+  scroll-margin-top: 51px; 
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .snap-section.active {
   opacity: 1;
   transform: translateY(0);
-}
-
-@keyframes moveLine {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 .animated-gradient-line {
@@ -55,7 +40,8 @@
   background-size: 200% 100%;
   position: relative;
   overflow: hidden;
-  margin: 0px; /* Điều chỉnh khoảng cách với hàng trên/dưới */
+  margin: 0;
+  animation: moveLine 1.6s ease-in-out infinite;
 }
 
 @keyframes moveLine {
@@ -64,24 +50,12 @@
   100% { background-position: 0% 50%; }
 }
 
-
-.animated-gradient-line {
-  animation: moveLine 1.6s ease-in-out infinite;
-}
-/* 
-<!-- CSS Animation --> */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-fadeIn {
-  animation: fadeIn 1s ease-out forwards;
-}
-
-@keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-.animate-marquee {
-  animation: marquee 15s linear infinite;
+#loading-pdf,
+#loading-pdf1,
+#loading-pdf2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9fafb;
+  z-index: 10;
 }
