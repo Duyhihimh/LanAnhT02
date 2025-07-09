@@ -13,7 +13,7 @@
   <nav class="fixed top-0 w-full bg-white shadow-md z-50 py-3 px-4">
     <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
       <a href="#giangvien" id="link-giangvien" class="font-semibold text-gray-800 hover:text-blue-600 transition">Giảng viên</a>
-      <a href="#baigiang" id="link-baigiang" class="font-semibold text-gray-800 hover:text-blue-600 transition">Bài giảng</a>
+      <a href="#tailieuchinh" id="link-tailieuchinh" class="font-semibold text-gray-800 hover:text-blue-600 transition">Tài Liệu Chính</a>
       <a href="#tailieu" id="link-tailieu" class="font-semibold text-gray-800 hover:text-blue-600 transition">Tài liệu</a>
     </div>
   </nav>
@@ -25,7 +25,7 @@
         <!-- Ô 1: Ảnh giảng viên (1/3) -->
         <div class="md:col-span-1 w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-blue-500 shadow-md mb-2">
           <img 
-            src="https://raw.githubusercontent.com/Duyhihmh/LanAnhT02/main/source/anh_co_lan_anh.jpg" 
+            src="/source/anh_co_lan_anh.jpg" 
             alt="Cô Lan Anh" 
             class="w-full h-full object-cover"
           />
@@ -82,11 +82,21 @@
 
           <!-- Ô 4: Lịch sử công tác -->
           <div class="bg-white rounded-lg p-4">
-            <h2 class="text-xl font-bold mb-2">Lịch sử công tác</h2>
-            <p class="text-gray-700">
-              Tốt nghiệp cử nhân năm 2010 tại Học viện CSND.<br>
-              Công tác từ năm 2012 đến nay tại Khoa Lý luận chính trị.
-            </p>
+            <h2 class="text-xl font-bold mb-3 text-gray-800  justify-center flex items-center  gap-2">
+              <span class="text-emerald-500 text-center">🎖️</span> <!-- Icon chức danh -->
+              Lịch sử công tác
+            </h2>
+            <ul class="space-y-3 text-gray-700 list-disc pl-5">
+              <li>
+                
+                <span class ="font-semibold"> Tốt nghiệp cử nhân năm 2009 tại Học viện CSND. </span>
+              </li>
+              <li>
+                
+                <span class ="font-semibold"> Công tác từ năm 2011 đến nay tại khoa Lý Luận chính trị & KHXHNV </span>
+              </li>
+              
+            </ul>
           </div>
         </div>
       </div>
@@ -94,19 +104,118 @@
 
 
 
-    <!-- Section Bài giảng -->
-    <section id="baigiang" class="snap-section bg-gradient-to-r from-green-50 to-teal-100">
-      <div class="text-center max-w-4xl px-6">
-        <h2 class="text-3xl font-bold text-gray-800 mb-6">Bài giảng</h2>
-        <div class="w-full h-[80vh] border border-gray-300 rounded-lg overflow-hidden shadow-md">
-          <iframe 
-            src="https://raw.githubusercontent.com/Duyhihmh/LanAnhT02/main/source/GiaoTrinhLSD.pdf" 
-            class="w-full h-full"
-            title="Bài giảng PDF"
-          ></iframe>
+    <!-- Section Tài Liệu Chính -->
+    <section id="tailieuchinh" class="snap-section bg-gradient-to-r from-green-50 to-teal-100 py-12 px-6">
+      <div class="max-w-6xl mx-auto animate-fadeIn">
+        <!-- Tiêu đề -->
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Tài Liệu Chính</h2>
+        
+        <!-- Đường kẻ gradient -->
+        <div class="w-full h-1 bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-400 my-6"></div>
+        
+        <!-- Bố cục 2 cột -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Ô 1: Thông tin tài liệu (1/3) -->
+          <div class="md:col-span-1 bg-white p-6 rounded-lg shadow-md">
+            <div class="space-y-6">
+              <!-- Văn kiện Đảng -->
+              <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3">
+                <div class="text-emerald-500 w-6 h-6 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0a2 2 0 002-2H5a2 2 0 00-2 2m14 0v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Văn kiện Đảng toàn tập</h3>
+                  <p class="text-sm text-gray-600 mt-1">
+                    Tập 7: Phản ánh những đóng góp lý luận của Hồ Chí Minh cho chủ nghĩa Mác - Lênin.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Hồ Chí Minh toàn tập -->
+              <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3">
+                <div class="text-emerald-500 w-6 h-6 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.245 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.745 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.745 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Hồ Chí Minh toàn tập</h3>
+                  <p class="text-sm text-gray-600 mt-1">
+                    Tập 3 (1930–1945): Định hướng chiến lược cách mạng Việt Nam và thế giới.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tạp chí lịch sử -->
+              <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3">
+                <div class="text-emerald-500 w-6 h-6 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-2a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-800">Tạp chí Lịch sử Đảng</h3>
+                  <p class="text-sm text-gray-600 mt-1">
+                    Phân tích vai trò của Đại thắng mùa Xuân 1975 trong xây dựng đất nước.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Nút tải tài liệu -->
+              <div class="mt-6">
+                <a href="/source/GiaoTrinhLSD.pdf" download class="inline-block w-full px-4 py-2 bg-emerald-500 text-white rounded-md shadow hover:bg-emerald-600 transition text-center">
+                  📄 Tải tài liệu xuống
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ô 2: Hiển thị PDF (2/3) -->
+          <div class="md:col-span-2 bg-white p-6 rounded-lg shadow-md">
+            <div class="w-full h-[80vh] border border-gray-300 rounded-lg overflow-hidden shadow-inner relative">
+              <!-- Khung PDF -->
+              <iframe 
+                src="/source/GiaoTrinhLSD.pdf" 
+                class="w-full h-full opacity-0 transition-opacity duration-500"
+                title="Bài giảng PDF"
+                onload="this.style.opacity=1"
+              ></iframe>
+              
+              <!-- Hiệu ứng loading -->
+              <div class="absolute inset-0 flex items-center justify-center bg-gray-50 opacity-75" id="loading-pdf">
+                <div class="flex flex-col items-center">
+                  <svg class="animate-spin h-8 w-8 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291l-1.414-1.414 3.291-3.291H4v-2h5.879l-3.291-3.291L8.291 4 12 7.709 15.709 4l1.414 1.414L13.414 9H20v2h-6.586l3.709 3.709 1.414-1.414L12 11.586 4.291 19.291l1.414 1.414L12 14.414z"/>
+                  </svg>
+                  <span class="mt-2 text-sm text-gray-600">Đang tải tài liệu...</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Mô tả ngắn về tài liệu -->
+            <p class="mt-6 text-gray-600 text-sm">
+              Tài liệu bao gồm các văn kiện quan trọng của Đảng Cộng sản Việt Nam và tác phẩm của Chủ tịch Hồ Chí Minh, phản ánh những đóng góp lý luận và thực tiễn trong quá trình xây dựng đất nước.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marquee tài liệu liên quan -->
+      <div class="mt-12 w-full overflow-hidden whitespace-nowrap bg-emerald-600 text-white py-3">
+        <div class="inline-block animate-marquee">
+          <span class="mx-8 text-sm font-medium">📚 Văn kiện Đảng toàn tập</span>
+          <span class="mx-8 text-sm font-medium">📘 Hồ Chí Minh toàn tập</span>
+          <span class="mx-8 text-sm font-medium">📰 Tạp chí Cộng sản</span>
+          <span class="mx-8 text-sm font-medium">🗞️ Báo Quân đội nhân dân</span>
+          <span class="mx-8 text-sm font-medium">📡 Tạp chí Quốc phòng toàn dân</span>
         </div>
       </div>
     </section>
+
+
 
     <!-- Section Tài liệu -->
     <section id="tailieu" class="snap-section bg-gradient-to-r from-purple-50 to-pink-100">
