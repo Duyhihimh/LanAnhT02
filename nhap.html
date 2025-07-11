@@ -24,3 +24,112 @@
                   <span class="mt-2 text-sm text-gray-600">Đang tải tài liệu...</span>
                 </div>
               </div>
+
+
+
+  <!-- Section Tài Liệu Tham Khảo -->
+
+    <section id="tailieuthamkhao" class="snap-section bg-gradient-to-r from-green-50 to-teal-100 py-12 px-6">
+      <div class="max-w-6xl mx-auto animate-fadeIn">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Ô 1: Danh sách tài liệu -->
+          <div class="md:col-span-1 bg-white p-6 rounded-lg shadow-md">
+            <div class="space-y-8">
+
+              <!-- Thư viện điện tử HVCSND -->
+              <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition active"
+                  onclick="loadContent('/source/ThuviendientuHVCSND.jpg', 'pdfFrame2', 'loading-pdf2', 'downloadBtn2', this)">
+                <div class="text-emerald-500 w-6 h-6 mt-1 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35M5 11a6 6 0 1112 0 6 6 0 01-12 0z" />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-semibold text-gray-800">Thư viện điện tử HVCSND</h3>
+                  <p class="text-sm text-gray-600 mt-1">Thư viện điện tử Học viện Cảnh sát Nhân dân</p>
+                </div>
+              </div>
+
+              <!-- Tư liệu văn kiện Đảng -->
+              <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition"
+                  onclick="loadContent('/source/tu lieu van kien dang.png', 'pdfFrame2', 'loading-pdf2', 'downloadBtn2', this)">
+                <div class="text-emerald-500 w-6 h-6 mt-1 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5h6m-3 0v1m-6 4h12m-12 4h12m-12 4h12M7 3h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z" />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-semibold text-gray-800">Tư liệu văn kiện Đảng</h3>
+                  <p class="text-sm text-gray-600 mt-1">Tư liệu văn kiện Đảng</p>
+                </div>
+              </div>
+
+              <!-- Sách tham khảo -->
+              <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition"
+                  onclick="loadContent('/source/Test1.pdf', 'pdfFrame2', 'loading-pdf2', 'downloadBtn2', this)">
+                <div class="text-emerald-500 w-6 h-6 mt-1 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.245 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.745 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.745 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-semibold text-gray-800">Sách tham khảo</h3>
+                  <p class="text-sm text-gray-600 mt-1">Sách tham khảo</p>
+                </div>
+              </div>
+
+              <!-- Báo và tạp chí -->
+              <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition"
+                  onclick="loadContent('/source/bao va tap chi.png', 'pdfFrame2', 'loading-pdf2', 'downloadBtn2', this)">
+                <div class="text-emerald-500 w-6 h-6 mt-1 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                    <rect x="4" y="4" width="16" height="16" rx="2" strokeWidth="2" />
+                    <path strokeWidth="2" d="M16 4L20 8H16V4Z" fill="none" />
+                    <line x1="6" y1="10" x2="14" y2="10" strokeWidth="2" />
+                    <line x1="6" y1="14" x2="12" y2="14" strokeWidth="2" />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-semibold text-gray-800">Báo và tạp chí</h3>
+                  <p class="text-sm text-gray-600 mt-1">Báo và tạp chí</p>
+                </div>
+              </div>
+
+              <!-- Nút tải tài liệu -->
+              <div class="mt-6">
+                <a href="/source/GiaoTrinhLSD.pdf" download id="downloadBtn2" 
+                  class="inline-block w-full px-4 py-2 bg-emerald-500 text-white rounded-md shadow hover:bg-emerald-600 transition text-center">
+                  📄 Tải tài liệu xuống
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ô 2: Hiển thị nội dung PDF -->
+          <div class="md:col-span-2 bg-white p-6 rounded-lg shadow-md">
+            <div class="w-full h-[80vh] border border-gray-300 rounded-lg overflow-hidden shadow-inner relative">
+              <!-- Hiệu ứng loading -->
+              <div id="loading-pdf2" class="absolute inset-0 flex items-center justify-center bg-gray-50 z-10">
+                <div class="flex flex-col items-center">
+                  <svg class="animate-spin h-8 w-8 text-emerald-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291l-1.414-1.414 3.291-3.291H4v-2h5.879l-3.291-3.291L8.291 4 12 7.709 15.709 4l1.414 1.414L13.414 9H20v2h-6.586l3.709 3.709 1.414-1.414L12 11.586 4.291 19.291l1.414 1.414L12 14.414z"/>
+                  </svg>
+                  <span class="mt-2 text-sm text-gray-600">Đang tải tài liệu...</span>
+                </div>
+              </div>
+
+              <!-- Khung PDF dùng iframe -->
+              <iframe 
+                id="pdfFrame2"
+                src="/source/GiaoTrinhLSD.pdf" 
+                class="w-full h-full opacity-0 transition-opacity duration-500"
+                title="Tài liệu tham khảo"
+                onload="hideLoading('pdfFrame2', 'loading-pdf2')"
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
