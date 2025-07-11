@@ -68,3 +68,5 @@ function hideLoading(iframeId, loadingId) {
   // Hiển thị tài liệu
   if (iframe) iframe.style.opacity = '1';
 }
+
+
