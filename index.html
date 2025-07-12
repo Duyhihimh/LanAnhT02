@@ -23,7 +23,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="md:col-span-1 flex justify-center">
           <div class="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-blue-500 shadow-md">
-            <img src="/LanAnhT02/source/anh_co_lan_anh.jpg" alt="Ảnh Cô Lan Anh" class="w-full h-full object-cover" />
+            <img src="/source/anh_co_lan_anh.jpg" alt="Ảnh Cô Lan Anh" class="w-full h-full object-cover" />
           </div>
         </div>
         <div class="md:col-span-2 bg-white rounded-lg text-center flex items-center justify-center p-4">
@@ -74,12 +74,12 @@
                 <!-- Thông tin tài liệu -->
                 <div class="bg-white/80 backdrop-blur-sm rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-teal-100">
                     <h2 class="text-3xl font-bold text-center text-teal-800 mb-4">Giáo trình Lịch sử Đảng Cộng sản Việt Nam</h2>
-                    <p class="text-gray-700 mb-6">
+                    <p class="text-gray-700 font-semibold mb-6 ">
                          Giáo trình Lịch sử Đảng Cộng sản Việt Nam dành cho bậc đại học hệ không chuyên lý luận chính trị, cung cấp hệ thống kiến thức về sự ra đời của Đảng và quá trình Đảng lãnh đạo cách mạng Việt Nam qua các thời kỳ lịch sử.
                     </p>
                     
                     <a 
-                        href="/LanAnhT02/source/GiaoTrinhLSD.pdf" 
+                        href="/source/GiaoTrinhLSD.pdf" 
                         download
                         class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-500 to-green-500 text-white rounded-lg hover:from-teal-600 hover:to-green-600 transition-all transform hover:scale-105 shadow-md hover:shadow-lg"
                     >
@@ -91,7 +91,7 @@
                     </a>
                 </div>
 
-                <!-- Hiển thị PDF -->
+                <!-- DIV loading... -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-shadow duration-300 relative mt-8 border border-gray-200">
                     <!-- Hiệu ứng loading -->
                     <div id="loadingPDF" class="absolute inset-0 bg-white flex items-center justify-center loading-spinner z-10">
@@ -104,7 +104,7 @@
                     <!-- Khung PDF -->
                     <div class="relative pt-[100%] bg-white">
                         <iframe 
-                            src="/LanAnhT02/source/GiaoTrinhLSD.pdf" 
+                            src="/source/GiaoTrinhLSD.pdf" 
                             class="absolute inset-0 w-full h-full bg-white"
                             title="Giáo trình Lịch sử Đảng"
                             onload="document.getElementById('loadingPDF').style.display = 'none'"
@@ -125,7 +125,7 @@
                 
                 <!-- Cột trái (1/3) -->
                 <div class="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-md">
-                    <h3 class="text-xl font-bold text-teal-800 mb-4">Danh mục</h3>
+                    <h3 class="text-xl text-center font-bold text-teal-800 mb-4">Danh mục</h3>
                     <ul class="space-y-8" id="menu">
                       <li>
                           <button onclick="showContent('thuvien')" 
@@ -140,7 +140,7 @@
                                   </div>
                                   <div class="flex-1 text-left">
                                       <h3 class="font-semibold text-gray-800">Thư viện điện tử HVCSND</h3>
-                                      <p class="text-sm text-gray-600 mt-1">Thư viện điện tử Học viện Cảnh sát Nhân dân</p>
+                                      <p class="text-sm text-gray-600 mt-1">Nơi cung cấp nguồn tài liệu số phong phú, phục vụ học tập, giảng dạy và nghiên cứu trong toàn Học viện.</p>
                                   </div>
                               </div>
                           </button>
@@ -161,7 +161,7 @@
                                   </div>
                                   <div class="flex-1 text-left">
                                       <h3 class="font-semibold text-gray-800">Hệ thống tư liệu - văn kiện Đảng</h3>
-                                      <p class="text-sm text-gray-600 mt-1">Cô cho chữ gì cho hay hay đi ạ</p>
+                                      <p class="text-sm text-gray-600 mt-1"> Nơi lưu giữ đầy đủ văn bản chính thống phục vụ học tập, nghiên cứu và công tác xây dựng Đảng.</p>
                                   </div>
                               </div>
                           </button>
@@ -179,7 +179,7 @@
                                   </div>
                                   <div class="flex-1 text-left">
                                       <h3 class="font-semibold text-gray-800">Sách tham khảo</h3>
-                                      <p class="text-sm text-gray-600 mt-1">Xin chữ tiếp cô ơi</p>
+                                      <p class="text-sm text-gray-600 mt-1">Sách cung cấp kiến thức nền tảng, phục vụ nghiên cứu, giảng dạy và học tập về quá trình cách mạng Việt Nam.</p>
                                   </div>
                               </div>
                           </button>
@@ -201,7 +201,7 @@
                                   </div>
                                   <div class="flex-1 text-left">
                                       <h3 class="font-semibold text-gray-800">Báo và tạp chí</h3>
-                                      <p class="text-sm text-gray-600 mt-1">hehe xin chữ thêm</p>
+                                      <p class="text-sm text-gray-600 mt-1">Báo và tạp chí về lịch sử Đảng phản ánh kịp thời lý luận, thực tiễn, phục vụ công tác nghiên cứu và tuyên truyền giáo dục.</p>
                                   </div>
                               </div>
                           </button>
@@ -217,7 +217,7 @@
                       <h3 class="text-2xl font-bold text-teal-800 mb-4">Thư viện điện tử HVCSND</h3>
                       <div class="bg-white rounded-xl overflow-hidden shadow-lg">
                         <img 
-                          src="/LanAnhT02/source/ThuviendientuHVCSND.jpg" 
+                          src="/source/ThuviendientuHVCSND.jpg" 
                           alt="Thư viện" 
                           style="width: 700px; height: 600px; object-fit: cover;"
                         />
@@ -230,7 +230,7 @@
                           <div class="relative pt-[75%] bg-white rounded-xl shadow-lg overflow-hidden mx-auto max-w-4xl">
                               <a href="https://tulieuvankien.dangcongsan.vn/" target="_blank" rel="noopener noreferrer" class="absolute inset-0 block">
                                  <img id="tulieuvankiendang-contentImage" 
-                                    src="/LanAnhT02/source/hethongtulieuvankiendang.jpg" 
+                                    src="/source/hethongtulieuvankiendang.jpg" 
                                     alt="Hệ thống tư liệu - văn kiện Đảng" 
                                     class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500">
                               </a> 
@@ -269,11 +269,11 @@
                     <div id="sach" class="content-section hidden p-6 max-w-6xl mx-auto">
                       <h3 class="text-2xl font-bold text-teal-800 mb-6">Danh sách sách tham khảo</h3>
                       
-                      <!-- Bộ sách -->
+                      <!-- Bộ 6 -->
                       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         <!-- Sách 1 -->
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                          <img src="/LanAnhT02/source/sach1phongtraodanchu.jpg" alt="Bìa sách Phong trào dân tộc dân chủ ở nam kỳ 1930 - 1945" class="w-full h-64 object-cover">
+                          <img src="/source/sach1phongtraodanchu.jpg" alt="Bìa sách Phong trào dân tộc dân chủ ở nam kỳ 1930 - 1945" class="w-full h-64 object-cover">
                           <div class="p-4">
                             <h4 class="font-bold text-lg text-teal-800 mb-2">PHONG TRÀO DÂN TỘC DÂN CHỦ Ở NAM KỲ 1930 - 1945</h4>
                             <p class="text-sm text-gray-600 mb-3">Cuốn sách Phong trào dân tộc dân chủ ở Nam Kỳ 1930-1945, nghiên cứu qua tài liệu lưu trữ (Sách chuyên khảo) do TS. Phạm Thị Huệ biên soạn. Phần lớn các tài liệu đưa vào cuốn sách này là tư liệu lần đầu tiên được công bố.</p>
@@ -283,7 +283,7 @@
 
                         <!-- Sách 2 -->
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                          <img src="/LanAnhT02/source/sach2cachmangthang8.jpg" alt="Bìa sách Cách mạng tháng Tám 1945 - thắng lợi vĩ đại đầu tiên của dân tộc Việt Nam trong thế kỷ XX" class="w-full h-64 object-cover">
+                          <img src="/source/sach2cachmangthang8.jpg" alt="Bìa sách Cách mạng tháng Tám 1945 - thắng lợi vĩ đại đầu tiên của dân tộc Việt Nam trong thế kỷ XX" class="w-full h-64 object-cover">
                           <div class="p-4">
                             <h4 class="font-bold text-lg text-teal-800 mb-2">Cách mạng tháng Tám 1945 - thắng lợi vĩ đại đầu tiên của dân tộc Việt Nam trong thế kỷ XX</h4>
                             <p class="text-sm text-gray-600 mb-3">Cuốn sách Cách mạng tháng Tám 1945 - thắng lợi vĩ đại đầu tiên của dân tộc Việt Nam trong thế kỷ XX được phát hành lần đầu năm 2020, nhân kỷ niệm 75 năm ngày Cách mạng Tháng Tám thành công. Đây là công trình nghiên cứu công phu của tập thể tác giả GS.TS.NGND Trịnh Nhu và PGS.TS Trần Trọng Thơ.</p>
@@ -293,7 +293,7 @@
 
                         <!-- Sách 3 -->
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                          <img src="/LanAnhT02/source/sach3cachmangthang8.jpg" alt="Bìa sách Cách mạng Tháng Tám năm 1945 ở Hà Nội " class="w-full h-64 object-cover">
+                          <img src="/source/sach3cachmangthang8.jpg" alt="Bìa sách Cách mạng Tháng Tám năm 1945 ở Hà Nội " class="w-full h-64 object-cover">
                           <div class="p-4">
                             <h4 class="font-bold text-lg text-teal-800 mb-2">Cách mạng Tháng Tám năm 1945 ở Hà Nội</h4>
                             <p class="text-sm text-gray-600 mb-3">Cách mạng Tháng Tám năm 1945 ở Hà Nội do Nguyễn Đình Lê chủ biên, xuất bản năm 2010 nhân dịp 1.000 năm Thăng Long Hà Nội.</p>
@@ -302,7 +302,7 @@
 
                         <!-- Sách 4 -->
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                          <img src="/LanAnhT02/source/sach4cachmangthangtam.jpg" alt="Bìa sách Cách mạng Tháng Tám 1945 toàn cảnh" class="w-full h-64 object-cover">
+                          <img src="/source/sach4cachmangthangtam.jpg" alt="Bìa sách Cách mạng Tháng Tám 1945 toàn cảnh" class="w-full h-64 object-cover">
                           <div class="p-4">
                             <h4 class="font-bold text-lg text-teal-800 mb-2">Cách mạng Tháng Tám 1945 toàn cảnh</h4>
                             <p class="text-sm text-gray-600 mb-3">Cách mạng Tháng Tám 1945 toàn cảnh của GS.TS Phan Ngọc Liên (chủ biên) được Nhà xuất bản Từ điển bách khoa xuất bản năm 2005, cuốn sách dày 543 trang, có kết cấu 3 phần: Cách mạng tháng Tám 1945 - Những vấn đề cơ bản; Cách mạng tháng Tám 1945 - Toàn cảnh và Giáo dục tinh thần Cách mạng tháng Tám 1945 cho thế hệ trẻ.</p>
@@ -312,7 +312,7 @@
 
                         <!-- Sách 5 -->
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                          <img src="/LanAnhT02/source/sach5cachmangthang8.jpg" alt="Bìa sách Cách mạng Tháng Tám - Những giờ phút lịch sử" class="w-full h-64 object-cover">
+                          <img src="/source/sach5cachmangthang8.jpg" alt="Bìa sách Cách mạng Tháng Tám - Những giờ phút lịch sử" class="w-full h-64 object-cover">
                           <div class="p-4">
                             <h4 class="font-bold text-lg text-teal-800 mb-2">Cách mạng Tháng Tám - Những giờ phút lịch sử</h4>
                             <p class="text-sm text-gray-600 mb-3">Cuốn sách Cách mạng Tháng Tám - Những giờ phút lịch sử do GS Đinh Xuân Lâm và TS Nguyễn Văn Khoan chủ biên, Nhà xuất bản Thanh Niên phát hành năm 2015, nhân kỷ niệm 70 năm thành lập nước.</p>
@@ -322,7 +322,7 @@
 
                         <!-- Sách 6 -->
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                          <img src="/LanAnhT02/source/sach6lichsudanghuyenyenmo.jpg" alt="Bìa sách Lịch sử Đảng bộ huyện Yên Mô (1930 - 2020)" class="w-full h-64 object-cover">
+                          <img src="/source/sach6lichsudanghuyenyenmo.jpg" alt="Bìa sách Lịch sử Đảng bộ huyện Yên Mô (1930 - 2020)" class="w-full h-64 object-cover">
                           <div class="p-4">
                             <h4 class="font-bold text-lg text-teal-800 mb-2">Lịch sử Đảng bộ huyện Yên Mô (1930 - 2020)</h4>
                             <p class="text-sm text-gray-600 mb-3">Cuốn sách Lịch sử Đảng bộ huyện Yên Mô (1930 - 2020) do Ban Chấp hành Đảng bộ huyện Yên Mô (Đảng bộ tỉnh Ninh Bình)</p>
@@ -339,7 +339,7 @@
                         <div class="bg-white rounded-xl overflow-hidden shadow-lg relative">
                         
                           <div class="max-w-6xl mx-auto">
-                            <!-- Tabs điều hướng -->
+                            <!-- Tab điều hướng -->
                             <div class="flex flex-wrap gap-3 mb-6" id="tabContainer">
                               <button onclick="changeContent(0)" class="tab-button active-tab px-4 py-2 bg-teal-600 text-white rounded-lg transition-all duration-300 hover:bg-teal-700">Tạp chí Cộng sản</button>
                               <button onclick="changeContent(1)" class="tab-button px-4 py-2 bg-white text-gray-800 border border-gray-300 rounded-lg transition-all duration-300 hover:bg-gray-100">Tạp chí lịch sử Đảng</button>
@@ -352,7 +352,7 @@
                             <div class="relative pt-[75%] bg-white rounded-xl shadow-lg overflow-hidden mx-auto max-w-4xl">
                               <a id="bao-imageLink" href="#" target="_blank" class="absolute inset-0 block">
                                 <img id="bao-contentImage" 
-                                    src="/LanAnhT02/source/tapchicongsan.jpg" 
+                                    src="/source/tapchicongsan.jpg" 
                                     alt="Tạp chí cộng sản" 
                                     class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500">
                               </a>
@@ -363,39 +363,39 @@
                             // Mảng chứa thông tin hình ảnh
                             const contentData = [
                               {
-                                src: "/LanAnhT02/source/tapchicongsan.jpg",
+                                src: "/source/tapchicongsan.jpg",
                                 alt: "Tạp chí cộng sản",
                                 link: "https://www.tapchicongsan.org.vn/web/guest/chi-tiet-tim-kiem/-/2018/965402/bai-hoc-phat-huy-suc-manh-toan-dan-toc-cua-cach-mang-thang-tam-nam-1945-va-su-van-dung-trong-su-nghiep-bao-ve-an-ninh%2C-trat-tu-hien-nay.aspx"
                               },
                               {
-                                src: "/LanAnhT02/source/tapchilichsudang.jpg",
+                                src: "/source/tapchilichsudang.jpg",
                                 alt: "Tạp chí Lịch sử Đảng",
                                 link: "https://tapchilichsudang.vn/vai-tro-cua-mat-tran-viet-minh-doi-voi-phong-trao-dau-tranh-giai-phong-dan-toc.html"
                               },
                               {
-                                src: "/LanAnhT02/source/baoquandoinhandan.jpg",
+                                src: "/source/baoquandoinhandan.jpg",
                                 alt: "Báo Quân đội nhân dân",
                                 link: "https://www.qdnd.vn/chinh-tri/tin-tuc/nhung-quyet-sach-quan-trong-tu-hoi-nghi-trung-uong-8-425025"
                               },
                               {
-                                src: "/LanAnhT02/source/baonhandan.jpg",
+                                src: "/source/baonhandan.jpg",
                                 alt: "Báo nhân dân",
                                 link: "https://nhandan.vn/hoi-nghi-trung-uong-dang-lan-thu-8-voi-viec-to-chuc-luc-luong-vu-trang-cach-mang-tien-toi-tong-khoi-nghia-thang-8-nam-1945-post438334.html"
                               },
                             ];
 
-                            // Hàm thay đổi nội dung hiển thị
+                            // Hàm thay đổi nội dung hiển thị - change 3 const 
                             function changeContent(index) {
                               const imageElement = document.getElementById('bao-contentImage');
                               const imageLink = document.getElementById('bao-imageLink');
                               const tabs = document.querySelectorAll('.tab-button');
                               
-                              // Cập nhật hình ảnh
+                              // update pic
                               imageElement.src = contentData[index].src;
                               imageElement.alt = contentData[index].alt;
                               imageLink.href = contentData[index].link;
                               
-                              // Cập nhật trạng thái active cho tab
+                              // update trạng thái active cho tab
                               tabs.forEach((tab, i) => {
                                 if (i === index) {
                                   tab.classList.add('active-tab');
@@ -411,7 +411,8 @@
                 </div>
             </div>
         </div>
-
+        
+        <!-- JS trong -->
         <script>
             // Ẩn tất cả các phần nội dung
             function hideAllContent() {
@@ -422,7 +423,7 @@
 
             // Hiển thị nội dung tương ứng
             function showContent(id) {
-                // Ẩn tất cả
+                // Trước tiên phải ẩn tất cả đã rồi sau đó mới hiện từng thằng 1
                 hideAllContent();
                 
                 // Hiển thị phần được chọn
@@ -441,7 +442,7 @@
                 activeBtn.classList.remove('text-teal-700');
             }
 
-            // Mặc định hiển thị thư viện khi load trang
+            // Hiển thị thư viện đầu tiên - tựa như mặc định hiển thị thư viện
             document.addEventListener('DOMContentLoaded', () => {
                 showContent('thuvien');
             });
@@ -449,7 +450,7 @@
     </section>
 
   </main>
-
+  <!-- JS ngoài -->
   <script src="script.js"></script>
 </body>
 </html>
