@@ -23,7 +23,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="md:col-span-1 flex justify-center">
           <div class="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-blue-500 shadow-md">
-            <img src="/LanAnhT02/source/anh_co_lan_anh.jpg" alt="Ảnh Cô Lan Anh" class="w-full h-full object-cover" />
+            <img src="/source/anh_co_lan_anh.jpg" alt="Ảnh Cô Lan Anh" class="w-full h-full object-cover" />
           </div>
         </div>
         <div class="md:col-span-2 bg-white rounded-lg text-center flex items-center justify-center p-4">
@@ -79,7 +79,7 @@
                     </p>
                     
                     <a 
-                        href="/LanAnhT02/source/GiaoTrinhLSD.pdf" 
+                        href="/source/GiaoTrinhLSD.pdf" 
                         download
                         class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-500 to-green-500 text-white rounded-lg hover:from-teal-600 hover:to-green-600 transition-all transform hover:scale-105 shadow-md hover:shadow-lg"
                     >
@@ -104,7 +104,7 @@
                     <!-- Khung PDF -->
                     <div class="relative pt-[100%] bg-white">
                         <iframe 
-                            src="/LanAnhT02/source/GiaoTrinhLSD.pdf" 
+                            src="/source/GiaoTrinhLSD.pdf" 
                             class="absolute inset-0 w-full h-full bg-white"
                             title="Giáo trình Lịch sử Đảng"
                             onload="document.getElementById('loadingPDF').style.display = 'none'"
@@ -153,7 +153,7 @@
                                   class="w-full" 
                                   type="button">
                               <div class="flex items-start gap-3 border-l-2 border-emerald-500 pl-3 cursor-pointer hover:bg-red-50 p-2 rounded transition"
-                                  id="btn-thuvien">
+                                  id="btn-tulieuvankiendang">
                                   <div class="text-emerald-500 w-6 h-6 mt-1 flex-shrink-0">
                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5h6m-3 0v1m-6 4h12m-12 4h12m-12 4h12M7 3h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z" />
@@ -212,110 +212,32 @@
                 <!-- Cột phải (2/3) -->
                 <div class="md:col-span-2">
 
-                      <!-- Nội dung thư viện -->
-                      <div id="thuvien" class="content-section animate-fadeIn p-6 max-w-4xl mx-auto">
-                        <h3 class="text-2xl font-bold text-teal-800 mb-4">Thư viện điện tử HVCSND</h3>
-                        <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                          <img 
-                            src="/source/ThuviendientuHVCSND.jpg" 
-                            alt="Thư viện" 
-                            style="width: 700px; height: 600px; object-fit: cover;"
-                          />
-                        </div>
-                      </div>    
+                    <!-- Nội dung thư viện -->
+                    <div id="thuvien" class="content-section animate-fadeIn p-6 max-w-4xl mx-auto">
+                      <h3 class="text-2xl font-bold text-teal-800 mb-4">Thư viện điện tử HVCSND</h3>
+                      <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                        <img 
+                          src="/source/ThuviendientuHVCSND.jpg" 
+                          alt="Thư viện" 
+                          style="width: 700px; height: 600px; object-fit: cover;"
+                        />
+                      </div>
+                    </div>    
 
-
-                    <!-- Tư liệu văn kiện đảng -->
-                    <div id="tulieuvankiendang" class="content-section hidden p-6 max-w-4xl mx-auto">
-                        <h3 class="text-2xl font-bold text-teal-800 mb-4">Tư liệu văn kiện đảng</h3>
-                        <div class="bg-white rounded-xl overflow-hidden shadow-lg relative">
-                        
-                          <div class="max-w-6xl mx-auto">
-                            <!-- Tabs điều hướng -->
-                            <div class="flex flex-wrap gap-3 mb-6" id="tabContainer">
-                              <button onclick="changeContent(0)" class="tab-button active-tab px-4 py-2 bg-teal-600 text-white rounded-lg transition-all duration-300 hover:bg-teal-700">Tạp chí cộng sản</button>
-                              <button onclick="changeContent(1)" class="tab-button px-4 py-2 bg-white text-gray-800 border border-gray-300 rounded-lg transition-all duration-300 hover:bg-gray-100">Tạp chí lịch sử Đảng</button>
-                              <button onclick="changeContent(2)" class="tab-button px-4 py-2 bg-white text-gray-800 border border-gray-300 rounded-lg transition-all duration-300 hover:bg-gray-100">Báo nhân dân</button>
-                              <button onclick="changeContent(3)" class="tab-button px-4 py-2 bg-white text-gray-800 border border-gray-300 rounded-lg transition-all duration-300 hover:bg-gray-100">Báo quân đội nhân dân</button>
-                              <button onclick="changeContent(4)" class="tab-button px-4 py-2 bg-white text-gray-800 border border-gray-300 rounded-lg transition-all duration-300 hover:bg-gray-100">Tạp chí quốc phòng toàn dân</button>
-                            </div>
-
-                            <!-- Khu vực hiển thị ảnh -->
-                            <div class="relative pt-[75%] bg-white rounded-xl shadow-lg overflow-hidden mx-auto max-w-4xl">
-                              <img id="contentImage" 
-                                  src="https://placehold.co/750x650/0d9488/FFFFFF?text=Tạp+Chí+Cộng+Sản" 
-                                  alt="Tạp chí cộng sản" 
-                                  class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500">
-                            </div>
+                    <!-- Tư liệu văn kiện Đảng -->
+                    <div id="tulieuvankiendang" class="content-section hidden">
+                        <h3 class="text-2xl font-bold text-teal-800 mb-4">Hệ thống tư liệu - văn kiện Đảng</h3>
+                          <div class="relative pt-[75%] bg-white rounded-xl shadow-lg overflow-hidden mx-auto max-w-4xl">
+                              <a href="https://tulieuvankien.dangcongsan.vn/" target="_blank" rel="noopener noreferrer" class="absolute inset-0 block">
+                                 <img id="tulieuvankiendang-contentImage" 
+                                    src="/source/hethongtulieuvankiendang.jpg" 
+                                    alt="Hệ thống tư liệu - văn kiện Đảng" 
+                                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500">
+                              </a> 
                           </div>
 
-                          <script>
-                            // Mảng chứa thông tin hình ảnh
-                            const contentData = [
-                              {
-                                src: " https://placehold.co/750x650/0d9488/FFFFFF?text=Tạp+Chí+Cộng+Sản",
-                                alt: "Tạp chí cộng sản"
-                              },
-                              {
-                                src: " https://placehold.co/750x650/0f7971/FFFFFF?text=Tạp+Chí+Lịch+Sử+Đảng",
-                                alt: "Tạp chí lịch sử Đảng"
-                              },
-                              {
-                                src: " https://placehold.co/750x650/ea580c/FFFFFF?text=Báo+Nhân+Dân",
-                                alt: "Báo nhân dân"
-                              },
-                              {
-                                src: " https://placehold.co/750x650/0369a1/FFFFFF?text=Báo+Quân+Đội+Nhân+Dân",
-                                alt: "Báo quân đội nhân dân"
-                              },
-                              {
-                                src: " https://placehold.co/750x650/7e22ce/FFFFFF?text=Tạp+Chí+Quốc+Phòng+Toàn+Dân",
-                                alt: "Tạp chí quốc phòng toàn dân"
-                              }
-                            ];
 
-                            // Hàm thay đổi nội dung hiển thị
-                            function changeContent(index) {
-                              const imageElement = document.getElementById('contentImage');
-                              const tabs = document.querySelectorAll('.tab-button');
-                              
-                              // Cập nhật hình ảnh
-                              imageElement.src = contentData[index].src;
-                              imageElement.alt = contentData[index].alt;
-                              
-                              // Cập nhật trạng thái active cho tab
-                              tabs.forEach((tab, i) => {
-                                if (i === index) {
-                                  tab.classList.add('active-tab');
-                                } else {
-                                  tab.classList.remove('active-tab');
-                                }
-                              });
-                            }
-                          </script>
-                        
-                        </div>
-                    </div>
-
-
-                    <!-- Nội dung sách tham khảo -->
-                    <div id="sach" class="content-section hidden">
-                        <h3 class="text-2xl font-bold text-teal-800 mb-4">Sách tham khảo</h3>
-                        <div class="bg-white rounded-xl overflow-hidden shadow-lg relative">
-                            <div class="relative pt-[120%]">
-                                <iframe 
-                                    src="/source/SachThamKhao.pdf" 
-                                    class="absolute inset-0 w-full h-full"
-                                    title="Sách tham khảo"
-                                ></iframe>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Nội dung báo và tạp chí -->
-                    <div id="bao" class="content-section hidden">
-                        <h3 class="text-2xl font-bold text-teal-800 mb-4">Báo và tạp chí</h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <a href=" https://www.nhandan.vn " target="_blank" 
                                class="block p-4 bg-white rounded-xl shadow hover:shadow-md transition-shadow border-l-4 border-teal-500">
                                 <h4 class="font-semibold text-teal-700">Nhân Dân</h4>
@@ -336,6 +258,101 @@
                                 <h4 class="font-semibold text-teal-700">Tạp chí Cộng Sản</h4>
                                 <p class="text-sm text-gray-600">Tạp chí lý luận chính trị</p>
                             </a>
+                        </div> -->
+                    </div>
+
+
+                    
+
+
+                    <!-- Nội dung sách tham khảo -->
+                    <div id="sach" class="content-section hidden">
+                        <h3 class="text-2xl font-bold text-teal-800 mb-4">Sách tham khảo</h3>
+                        <div class="bg-white rounded-xl overflow-hidden shadow-lg relative">
+                            <div class="relative pt-[120%]">
+                                <iframe 
+                                    src="/source/SachThamKhao.pdf" 
+                                    class="absolute inset-0 w-full h-full"
+                                    title="Sách tham khảo"
+                                ></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Báo và tạp chí -->
+                    <div id="bao" class="content-section hidden p-6 max-w-4xl mx-auto">
+                        <h3 class="text-2xl font-bold text-teal-800 mb-4">Báo và tạp chí</h3>
+                        <div class="bg-white rounded-xl overflow-hidden shadow-lg relative">
+                        
+                          <div class="max-w-6xl mx-auto">
+                            <!-- Tabs điều hướng -->
+                            <div class="flex flex-wrap gap-3 mb-6" id="tabContainer">
+                              <button onclick="changeContent(0)" class="tab-button active-tab px-4 py-2 bg-teal-600 text-white rounded-lg transition-all duration-300 hover:bg-teal-700">Tạp chí Cộng sản</button>
+                              <button onclick="changeContent(1)" class="tab-button px-4 py-2 bg-white text-gray-800 border border-gray-300 rounded-lg transition-all duration-300 hover:bg-gray-100">Tạp chí lịch sử Đảng</button>
+                              <button onclick="changeContent(2)" class="tab-button px-4 py-2 bg-white text-gray-800 border border-gray-300 rounded-lg transition-all duration-300 hover:bg-gray-100">Báo Quân đội nhân dân</button>
+                              <button onclick="changeContent(3)" class="tab-button px-4 py-2 bg-white text-gray-800 border border-gray-300 rounded-lg transition-all duration-300 hover:bg-gray-100">Báo nhân dân</button>
+                              
+                            </div>
+
+                            <!-- Khu vực hiển thị ảnh -->
+                            <div class="relative pt-[75%] bg-white rounded-xl shadow-lg overflow-hidden mx-auto max-w-4xl">
+                              <a id="bao-imageLink" href="#" target="_blank" class="absolute inset-0 block">
+                                <img id="bao-contentImage" 
+                                    src="/source/tapchicongsan.jpg" 
+                                    alt="Tạp chí cộng sản" 
+                                    class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500">
+                              </a>
+                            </div>
+                          </div>
+
+                          <script>
+                            // Mảng chứa thông tin hình ảnh
+                            const contentData = [
+                              {
+                                src: "/source/tapchicongsan.jpg",
+                                alt: "Tạp chí cộng sản",
+                                link: "https://www.tapchicongsan.org.vn/web/guest/chi-tiet-tim-kiem/-/2018/965402/bai-hoc-phat-huy-suc-manh-toan-dan-toc-cua-cach-mang-thang-tam-nam-1945-va-su-van-dung-trong-su-nghiep-bao-ve-an-ninh%2C-trat-tu-hien-nay.aspx"
+                              },
+                              {
+                                src: "/source/tapchilichsudang.jpg",
+                                alt: "Tạp chí Lịch sử Đảng",
+                                link: "https://tapchilichsudang.vn/vai-tro-cua-mat-tran-viet-minh-doi-voi-phong-trao-dau-tranh-giai-phong-dan-toc.html"
+                              },
+                              {
+                                src: "/source/baoquandoinhandan.jpg",
+                                alt: "Báo Quân đội nhân dân",
+                                link: "https://www.qdnd.vn/chinh-tri/tin-tuc/nhung-quyet-sach-quan-trong-tu-hoi-nghi-trung-uong-8-425025"
+                              },
+                              {
+                                src: "/source/baonhandan.jpg",
+                                alt: "Báo nhân dân",
+                                link: "https://nhandan.vn/hoi-nghi-trung-uong-dang-lan-thu-8-voi-viec-to-chuc-luc-luong-vu-trang-cach-mang-tien-toi-tong-khoi-nghia-thang-8-nam-1945-post438334.html"
+                              },
+                            ];
+
+                            // Hàm thay đổi nội dung hiển thị
+                            function changeContent(index) {
+                              const imageElement = document.getElementById('bao-contentImage');
+                              const imageLink = document.getElementById('bao-imageLink');
+                              const tabs = document.querySelectorAll('.tab-button');
+                              
+                              // Cập nhật hình ảnh
+                              imageElement.src = contentData[index].src;
+                              imageElement.alt = contentData[index].alt;
+                              imageLink.href = contentData[index].link;
+                              
+                              // Cập nhật trạng thái active cho tab
+                              tabs.forEach((tab, i) => {
+                                if (i === index) {
+                                  tab.classList.add('active-tab');
+                                } else {
+                                  tab.classList.remove('active-tab');
+                                }
+                              });
+                            }
+                          </script>
+                        
                         </div>
                     </div>
                 </div>
