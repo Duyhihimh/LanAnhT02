@@ -5,7 +5,7 @@
 .animate-fadeIn {
   animation: fadeIn 1s ease-out forwards;
 }
-
+/* MEDIA chưa biết sửa như nào  */
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
